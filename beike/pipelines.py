@@ -20,9 +20,6 @@ class BeikePipeline(object):
         # self.db.authenticate(settings['MONGO_USER'], settings['MONGO_PSW'])
 
     def process_item(self, item, spider):
-        position = item['position']
-        if position:
-            item['position'] = position.strip().replace('\n', '').replace(' ', '')
         postItem = dict(item)  # 把item转化成字典形式
         self.coll.insert(postItem)  # 向数据库插入一条记录
         return item  # 会在控制台输出原item数据，可以选择不写
