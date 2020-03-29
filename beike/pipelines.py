@@ -9,6 +9,7 @@ from scrapy.utils.project import get_project_settings
 
 settings = get_project_settings()
 
+
 class BeikePipeline(object):
     def __init__(self):
         # 链接数据库
@@ -21,10 +22,7 @@ class BeikePipeline(object):
     def process_item(self, item, spider):
         position = item['position']
         if position:
-            item['position'] = position.strip().replace('\n','').replace(' ','')
-
-
-
+            item['position'] = position.strip().replace('\n', '').replace(' ', '')
         postItem = dict(item)  # 把item转化成字典形式
         self.coll.insert(postItem)  # 向数据库插入一条记录
         return item  # 会在控制台输出原item数据，可以选择不写
