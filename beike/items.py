@@ -9,7 +9,6 @@ import scrapy
 
 
 class BeikeItem(scrapy.Item):
-    # define the fields for your item here like:
     name = scrapy.Field()
     property = scrapy.Field()
     sales_status = scrapy.Field()
@@ -18,4 +17,3 @@ class BeikeItem(scrapy.Item):
     area = scrapy.Field()
     average_price = scrapy.Field()
     total_price = scrapy.Field()
-
