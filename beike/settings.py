@@ -64,7 +64,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'beike.pipelines.BeikePipeline': 300,
+    'beike.pipelines.BeikePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -93,5 +93,5 @@ MONGO_HOST = "localhost"  # 主机IP
 MONGO_PORT = 27017  # 端口号
 MONGO_DB = "beike"  # 库名
 MONGO_COLL = "loupan"  # collection名
-MONGO_USER = "simple" #用户名
-MONGO_PSW = "test" #用户密码
+MONGO_USER = "simple"  # 用户名
+MONGO_PSW = "test"  # 用户密码
