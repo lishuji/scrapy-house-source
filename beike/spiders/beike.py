@@ -35,7 +35,6 @@ class BeikeSpider(scrapy.Spider):
             item['name'] = li.xpath('./div/div[1]/a/text()').extract_first()
             item['sales_status'] = li.xpath('./div/div[1]/span[1]/text()').extract_first()
             item['property'] = li.xpath('./div/div[1]/span[2]/text()').extract_first()
-            # item['position'] = li.xpath("/div/a[1]/text()").extract()
             item['position'] = li.xpath('./div/a[1]/text()').extract()[1]
             # item['house_type'] = li.xpath('./div/a[2]/span[2]/text()').extract_first() + '/' + li.xpath(
             #     './div/a[2]/span[3]/text()').extract_first()
