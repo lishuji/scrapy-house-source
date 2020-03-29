@@ -12,7 +12,7 @@ settings = get_project_settings()
 
 class BeikePipeline(object):
     def __init__(self):
-        # 链接数据库
+        # 链接MongoDB数据库
         client = pymongo.MongoClient(host=settings['MONGO_HOST'], port=settings['MONGO_PORT'])
         self.db = client[settings['MONGO_DB']]  # 获得数据库的句柄
         self.coll = self.db[settings['MONGO_COLL']]  # 获得collection的句柄
